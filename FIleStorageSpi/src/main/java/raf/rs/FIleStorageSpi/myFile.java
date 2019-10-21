@@ -10,5 +10,5 @@ public interface myFile {
 
 	boolean uploadFile(String path, String fileName);
 
-	boolean createMultipleFiles(String fileName,int numberOfFiles);
+	boolean createMultipleFiles(String path,String fileName,int numberOfFiles);
 }

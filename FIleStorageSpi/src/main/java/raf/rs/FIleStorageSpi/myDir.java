@@ -8,7 +8,7 @@ public interface myDir {
 
 	File searchDirectory(String dirPath, String searchFor);
 	
-	boolean createMultipleDirectories(String dirsName,int numberOfDirs);
+	boolean createMultipleDirectories(String path,String dirsName,int numberOfDirs);
 	
 	boolean createEmptyDir(String path, String fileName);
 	
