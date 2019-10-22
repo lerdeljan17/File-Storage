@@ -1,5 +1,7 @@
 package exceptions;
 
-public interface LowPrivilageLevel {
+public interface uploadFileException {
+
 	void printMessage();
+	
 }

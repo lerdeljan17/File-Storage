@@ -10,7 +10,7 @@ public interface myDir {
 	 * @param rootDirName
 	 * @return
 	 */
-	boolean initFileStorage(String path, String rootDirName);
+	boolean initFileStorage(String path, String rootDirName) throws Exception;
 
 	/**
 	 * @param dirPath

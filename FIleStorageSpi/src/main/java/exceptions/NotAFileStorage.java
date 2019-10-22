@@ -1,5 +1,5 @@
 package exceptions;
 
-public interface LowPrivilageLevel {
+public interface NotAFileStorage {
 	void printMessage();
 }

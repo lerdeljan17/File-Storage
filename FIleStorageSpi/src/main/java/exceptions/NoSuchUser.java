@@ -1,5 +1,6 @@
 package exceptions;
 
-public interface LowPrivilageLevel {
+public interface NoSuchUser {
+
 	void printMessage();
 }
