@@ -17,7 +17,7 @@ public interface myDir {
 	 * @param searchFor
 	 * @return
 	 */
-	File searchDirectory(String dirPath, String searchFor);
+	File[] searchDirectory(String dirPath, String searchFor);
 
 	/**
 	 * @param path
@@ -32,7 +32,7 @@ public interface myDir {
 	 * @param fileName
 	 * @return
 	 */
-	boolean createEmptyDir(String path, String fileName);
+	File createEmptyDir(String path, String fileName);
 
 	/**
 	 * @param ToDelPath
