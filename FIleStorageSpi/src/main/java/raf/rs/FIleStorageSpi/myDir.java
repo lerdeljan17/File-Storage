@@ -6,9 +6,9 @@ import java.util.List;
 public interface myDir {
 
 	/**
-	 * @param path
-	 * @param rootDirName
-	 * @return
+	 * @param path - Putanja do skladista
+	 * @param rootDirName - Naziv direktorijuma u skladistu
+	 * @return boolean - Obavestenje da li je uspesno inicijalizovano skladiste sa prosledjenim root direktorijumom
 	 */
 	boolean initFileStorage(String path, String rootDirName) throws Exception;
 
@@ -32,39 +32,40 @@ public interface myDir {
 	 * @param fileName
 	 * @return
 	 */
-	File createEmptyDir(String path, String fileName);
+	File createEmptyDirectory(String path, String fileName);
 
 	/**
 	 * @param ToDelPath
 	 * @param dirName
 	 * @return
 	 */
-	boolean delDir(String ToDelPath, String dirName);
+	boolean delDirectory(String ToDelPath, String dirName);
 
 	/**
 	 * @param pathSource
 	 * @param pathDest
 	 * @return
 	 */
-	boolean downloadDir(String pathSource, String pathDest);
+	boolean downloadDirectory(String pathSource, String pathDest);
 
 	/**
 	 * @param dirPathToList
 	 * @return
 	 */
-	String listDirs(String dirPathToList);
+	String listDirectories(String dirPath);
 
 	/**
 	 * @param dirPathTolist
 	 * @return
 	 */
-	String listFiles(String dirPathTolist);
+	String listFiles(String dirPath);
 
 	/**
+	 * @param path
 	 * @param extension
 	 * @return
 	 */
-	File getFilesWithExtension(String extension);
+	List<File> getFilesWithExtension(String path, String extension);
 
 	/**
 	 * @param withMetaData
@@ -73,10 +74,10 @@ public interface myDir {
 	File getFilesWithMetadata(boolean withMetaData);
 
 	/**
-	 * @param Sorted
+	 * @param sorted
 	 * @param fromDirPath
 	 * @return
 	 */
-	List<File> getAllFiles(boolean Sorted, String fromDirPath);
+	List<File> getAllFiles(boolean sorted, String fromDirPath);
 
 }
