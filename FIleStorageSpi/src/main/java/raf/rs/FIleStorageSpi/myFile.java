@@ -11,28 +11,28 @@ public interface myFile {
 	 * @param fileName
 	 * @return
 	 */
-	boolean delFile(String path, String fileName);
+	boolean delFile(String path, String fileName) throws Exception;
 
 	/**
 	 * @param patest
 	 * @param fileName
 	 * @return
 	 */
-	boolean createEmptyFile(String patest, String fileName);
+	boolean createEmptyFile(String patest, String fileName) throws Exception;
 
 	/**
 	 * @param pathSource
 	 * @param pathDest
 	 * @return
 	 */
-	boolean downloadFile(String pathSource, String pathDest);
+	boolean downloadFile(String pathSource, String pathDest) throws Exception;
 
 	/**
 	 * @param pathSource
 	 * @param pathDest
 	 * @return
 	 */
-	boolean uploadFile(String pathSource, String pathDest);
+	boolean uploadFile(String pathSource, String pathDest) throws Exception;
 
 	/**
 	 * @param path
@@ -70,7 +70,7 @@ public interface myFile {
 	 * @param destPath
 	 * @return
 	 */
-	boolean uploadArchive(String archivePath, String destPath);
+	boolean uploadArchive(String archivePath, String destPath) throws Exception;
 
 	/**
 	 * @param archiveName
@@ -78,7 +78,7 @@ public interface myFile {
 	 * @param filesToArchive
 	 * @return
 	 */
-	boolean uploadFilesAsArchive(String archiveName, String destPath, List<File> filesToArchive);
+	boolean uploadFilesAsArchive(String archiveName, String destPath, List<File> filesToArchive) throws Exception;
 
 
 }
