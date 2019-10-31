@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Hashtable;
 import java.util.List;
 
-public interface myFile {
+public interface MyFile {
 
 	/**
 	 * @param path
@@ -18,7 +18,7 @@ public interface myFile {
 	 * @param fileName
 	 * @return
 	 */
-	boolean createEmptyFile(String patest, String fileName) throws Exception;
+	boolean createEmptyFile(String path, String fileName) throws Exception;
 
 	/**
 	 * @param pathSource

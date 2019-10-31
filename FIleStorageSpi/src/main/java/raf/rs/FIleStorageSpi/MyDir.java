@@ -3,7 +3,7 @@ package raf.rs.FIleStorageSpi;
 import java.io.File;
 import java.util.List;
 
-public interface myDir {
+public interface MyDir {
 
 	/**
 	 * @param path - Putanja do skladista

@@ -6,4 +6,7 @@ public class CreateException extends Exception {
 		super("Greska prilikom kreiranja!");
 	}
 	
+	public CreateException(String text) {
+		super("Greska prilikom kreiranja! " + text);
+	}
 }
