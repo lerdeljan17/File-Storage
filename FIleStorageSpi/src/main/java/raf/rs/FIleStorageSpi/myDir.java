@@ -20,33 +20,37 @@ public interface myDir {
 	File[] searchDirectory(String dirPath, String searchFor);
 
 	/**
-	 * @param path
-	 * @param dirsName
-	 * @param numberOfDirs
+	 * Kreira vise direktorijuma ciji ce naziv biti rezultat konkatenacije parametra dirsName i neke od vrednosti iz intervala [0, numberOfDirs) 
+	 * @param path - putanja na kojoj ce se kreirati direktorijumi
+	 * @param dirsName - segment naziva direktorijuma
+	 * @param numberOfDirs - broj direktorijuma koji ce se kreirati. Uslov : numberOfDirs > 0
 	 * @return
 	 */
-	boolean createMultipleDirectories(String path, String dirsName, int numberOfDirs);
+	boolean createMultipleDirectories(String path, String dirsName, int numberOfDirs) throws Exception;
 
 	/**
-	 * @param path
-	 * @param fileName
+	 * Metoda za kreiranje praznog direktorijuma.
+	 * @param path - putanja na kojoj ce se kreirati prazan direktorijum
+	 * @param fileName - ime direktorijuma
 	 * @return
 	 */
-	File createEmptyDirectory(String path, String fileName);
+	File createEmptyDirectory(String path, String fileName) throws Exception;
 
 	/**
-	 * @param ToDelPath
-	 * @param dirName
+	 * Metoda koja brise direktorijum.
+	 * @param path - putanja sa koje ce se obrisati direktorijum
+	 * @param dirName - ime direktorijuma koji se brise
 	 * @return
 	 */
-	boolean delDirectory(String ToDelPath, String dirName);
+	boolean delDirectory(String path, String dirName) throws Exception;
 
 	/**
-	 * @param pathSource
-	 * @param pathDest
+	 * Metoda za preuzimanje direktorijuma.
+	 * @param pathSource - putanja sa koje ce se preuzeti direktorijum
+	 * @param pathDest - putanja na koju ce se smestiti preuzeti direktorijum
 	 * @return
 	 */
-	boolean downloadDirectory(String pathSource, String pathDest);
+	boolean downloadDirectory(String pathSource, String pathDest) throws Exception;
 
 	/**
 	 * @param dirPathToList
@@ -61,8 +65,9 @@ public interface myDir {
 	String listFiles(String dirPath);
 
 	/**
-	 * @param path
-	 * @param extension
+	 * Metoda koja vraca sve fajlove odredjene ekstanzije.
+	 * @param path - putanja na kojoj se nalaze fajlovi
+	 * @param extension - ekstenzija koje trebaju biti fajlovi
 	 * @return
 	 */
 	List<File> getFilesWithExtension(String path, String extension);
@@ -74,10 +79,18 @@ public interface myDir {
 	File getFilesWithMetadata(boolean withMetaData);
 
 	/**
-	 * @param sorted
-	 * @param fromDirPath
+	 * Vraca fajlove po imenima u direktorijumu i svim poddirektorijumima
+	 * @param sorted - true = vratice sortirani zapise
+	 * @param fromDirPath - putanja direktorijuma koji ce smatrati root direktorijumom za ovu metodu
 	 * @return
 	 */
-	List<File> getAllFiles(boolean sorted, String fromDirPath);
+	List<String> getAllFiles(boolean sorted, String dirPath) throws Exception;
+	
+
+	/**
+	 * Metoda koja prosiruje listu zabranjenih ekstanzija prosledjenom ekstanzijom.
+	 * @param extension - ekstanzija
+	 */
+	void setForbiddenExtension(String extension);
 
 }

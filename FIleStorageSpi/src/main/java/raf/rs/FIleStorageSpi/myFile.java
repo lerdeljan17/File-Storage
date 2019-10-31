@@ -80,9 +80,5 @@ public interface myFile {
 	 */
 	boolean uploadFilesAsArchive(String archiveName, String destPath, List<File> filesToArchive);
 
-	/**
-	 * @param extension
-	 */
-	void setForbiddenExtension(String extension);
 
 }
