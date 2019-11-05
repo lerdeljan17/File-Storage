@@ -40,7 +40,7 @@ public interface MyFile {
 	 * @param numberOfFiles
 	 * @return
 	 */
-	boolean createMultipleFiles(String path, String fileName, int numberOfFiles);
+	boolean createMultipleFiles(String path, String fileName, int numberOfFiles) throws Exception;
 
 	/**
 	 * @param pathDest
