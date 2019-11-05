@@ -73,9 +73,10 @@ public interface MyFile {
 	boolean uploadArchive(String archivePath, String destPath) throws Exception;
 
 	/**
-	 * @param archiveName
-	 * @param destPath
-	 * @param filesToArchive
+	 * Metoda koja arhivira listu prosledjenih fajlova. Ukoliko je neuspesno baca Exception-e.
+	 * @param archiveName - Ime arhive, ukoliko se ne navede ili je blanko ili null, arhiva ce imati naziv isti kao direktorijum u kome se nalaze fajlovi
+	 * @param destPath - Putanja na koju zelimo da smestimo arhivu
+	 * @param filesToArchive - Lista fajlova koje zelimo da arhiviramo
 	 * @return
 	 */
 	boolean uploadFilesAsArchive(String archiveName, String destPath, List<File> filesToArchive) throws Exception;
