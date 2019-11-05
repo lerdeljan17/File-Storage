@@ -48,7 +48,7 @@ public interface MyFile {
 	 * @param metaDataFiles
 	 * @return
 	 */
-	boolean uploadMultipleFiles(String pathDest, List<File> files, List<File> metaDataFiles);
+	boolean uploadMultipleFiles(String pathDest, List<File> files, List<File> metaDataFiles) throws Exception;
 
 	/**
 	 * @param FilePath
