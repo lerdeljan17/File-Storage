@@ -17,7 +17,7 @@ public class User {
 	public  boolean createNewUser(String username, String password) {
 		return isRootUser;};
 	
-	public  void revokePrivilage(User revokeFromUser) {
+	public  void revokePrivilage(User revokeFromUser,String privilage) {
 	}
 	
 	public  boolean connectToFileStorage(String rootDirPath,String FileStorageRootDirName)throws Exception {
