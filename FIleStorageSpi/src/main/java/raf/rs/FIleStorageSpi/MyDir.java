@@ -87,10 +87,4 @@ public interface MyDir {
 	List<String> getAllFiles(boolean sorted, String dirPath) throws Exception;
 	
 
-	/**
-	 * Metoda koja prosiruje listu zabranjenih ekstanzija prosledjenom ekstanzijom.
-	 * @param extension - ekstanzija
-	 */
-	void setForbiddenExtension(String extension);
-
 }
