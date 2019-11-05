@@ -66,8 +66,9 @@ public interface MyFile {
 	boolean addMetaData(String metaFilePath, Hashtable<String, String> metaData);
 
 	/**
-	 * @param archivePath
-	 * @param destPath
+	 * Uploaduje arhivu na prosledjenu destinaciju.
+	 * @param archivePath - Putanja do arhive koju zelimo da upload-ujemo.
+	 * @param destPath - Destinacija na koju zelimo da je upload-ujemo.
 	 * @return
 	 */
 	boolean uploadArchive(String archivePath, String destPath) throws Exception;
