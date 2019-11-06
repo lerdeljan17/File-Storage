@@ -6,4 +6,8 @@ public class UploadException extends Exception{
 		super("Greska prilikom postavljanja!");
 	}
 	
+	public UploadException(String text) {
+		super("Greska prilikom postavljanja! " + text);
+	}
+	
 }
