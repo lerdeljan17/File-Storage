@@ -6,10 +6,11 @@ import java.util.List;
 public interface MyDir {
 
 	/**
+	 * Metoda kojom vrsimo inicijalizaciju skladista.
 	 * @param path - Putanja do skladista
-	 * @param rootDirName - Naziv direktorijuma u skladistu
+	 * @param rootDirName - Naziv root direktorijuma u skladistu
 	 * @return boolean - Obavestenje da li je uspesno inicijalizovano skladiste sa prosledjenim root direktorijumom
-	 * @exception baca intiFileStorage exception
+	 * @exception - Ukoliko se desila greska, nemogucnost da se inicijalizira skladista bice "izbacen" intiFileStorageException
 	 */
 	boolean initFileStorage(String path, String rootDirName) throws Exception;
 
