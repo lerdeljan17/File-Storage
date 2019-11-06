@@ -9,11 +9,12 @@ public class User {
 	private ArrayList<String> privilages;
 	private boolean isRootUser;
 
-	public User(String username, String password, ArrayList<String> privilages) {
+	public User(String username, String password,boolean isRootUser, ArrayList<String> privilages) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.privilages = privilages;
+		this.isRootUser = isRootUser;
 	}
 
 	public User(String username, String password) {

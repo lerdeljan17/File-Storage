@@ -36,6 +36,14 @@ public interface MyDir {
 	 * @return
 	 */
 	File createEmptyDirectory(String path, String fileName) throws Exception;
+	
+	/**
+	 * Metoda za kreiranje praznog direktorijuma koja vraca boolean umesto fajl.
+	 * @param path - putanja na kojoj ce se kreirati prazan direktorijum
+	 * @param fileName - ime direktorijuma
+	 * @return
+	 */
+	boolean createEmptyDirectoryB(String path, String fileName) throws Exception;
 
 	/**
 	 * Metoda koja brise direktorijum.
