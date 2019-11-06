@@ -9,6 +9,7 @@ public interface MyDir {
 	 * @param path - Putanja do skladista
 	 * @param rootDirName - Naziv direktorijuma u skladistu
 	 * @return boolean - Obavestenje da li je uspesno inicijalizovano skladiste sa prosledjenim root direktorijumom
+	 * @exception baca intiFileStorage exception
 	 */
 	boolean initFileStorage(String path, String rootDirName) throws Exception;
 
@@ -59,10 +60,12 @@ public interface MyDir {
 	String listDirectories(String dirPath);
 
 	/**
+	 * vraca string svih fajlova sa ili bez meta podataka u zavisnosti od parametra withMetaData
 	 * @param dirPathTolist
+	 * @param withMetaData
 	 * @return
 	 */
-	String listFiles(String dirPath);
+	String listFiles(String dirPath,boolean withMetaData);
 
 	/**
 	 * Metoda koja vraca sve fajlove odredjene ekstanzije.
