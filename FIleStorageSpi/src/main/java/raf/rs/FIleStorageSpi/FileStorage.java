@@ -7,7 +7,7 @@ public interface FileStorage {
 	 * @param rootUser
 	 * @return
 	 */
-	boolean initFileStorage(MyDir rootDir,String name,User rootUser);
+	boolean initFileStorage(String rootDir,String name,User rootUser);
 
 	/**
 	 * Metoda koja prosiruje listu zabranjenih ekstanzija prosledjenom ekstanzijom.
@@ -16,7 +16,7 @@ public interface FileStorage {
 	/**
 	 * @param extension
 	 */
-	void setForbiddenExtension(String extension);
+	void addForbiddenExtension(String extension);
 	
 	/**
 	 * @param user
