@@ -3,16 +3,29 @@ package raf.rs.FIleStorageSpi;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * @author subot
+ *
+ */
 public class User {
 	
 	private String username;
 	private String password;
+	private FileStorage storage;
+	//TODO kako razresiti user - filestorage
 	
-	private ArrayList<String> privilages;
+	private ArrayList<PrivilageType> privilages;
 	
 	private boolean isRootUser;
-
-	public User(String username, String password, boolean isRootUser, ArrayList<String> privilages) {
+	
+	/**
+	 * Konstruktor koji se koristi prilikom parsiranja JSON File-a
+	 * @param username
+	 * @param password
+	 * @param isRootUser
+	 * @param privilages
+	 */	
+	public User(String username, String password, boolean isRootUser, ArrayList<PrivilageType> privilages) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -20,30 +33,39 @@ public class User {
 		this.isRootUser = isRootUser;
 	}
 
+	
+	/**
+	 * Konstruktor koji se koristi kada admin pravi usere
+	 * @param username
+	 * @param password
+	 */
 	public User(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.privilages = new ArrayList<String>();
-		this.privilages.add("add");
-		this.privilages.add("del");
-		this.privilages.add("read");
+		this.isRootUser = false;
+		this.privilages = new ArrayList<PrivilageType>();
+		this.privilages.add(PrivilageType.DOWNLOAD);
+		this.privilages.add(PrivilageType.READ);
 	}
 
-	public boolean createNewUser(String username, String password) {
+	public User createNewUser(String username, String password) {
+		return null;
+	}
 
+	public void revokePrivilage(User revokeFromUser, PrivilageType privilage) throws Exception {
+
+	}
+	
+	public void addPrivilage(User user, PrivilageType privilage) throws Exception {
+		
+	}
+
+	public boolean connectToFileStorage(String rootPath) throws Exception {
 		return false;
 	}
 
-	public void revokePrivilage(User revokeFromUser, String privilage) throws Exception {
-
-	}
-
-	public boolean connectToFileStorage(String rootDirPath, String FileStorageRootDirName) throws Exception {
-		return false;
-	}
-
-	public boolean disconnectFromFileStorage(String fileStorageRootDir) {
+	public boolean disconnectFromFileStorage(String rootPath) throws Exception {
 		return false;
 	}
 
@@ -63,11 +85,11 @@ public class User {
 		this.password = password;
 	}
 
-	public ArrayList<String> getPrivilages() {
+	public ArrayList<PrivilageType> getPrivilages() {
 		return privilages;
 	}
 
-	public void setPrivilages(ArrayList<String> privilages) {
+	public void setPrivilages(ArrayList<PrivilageType> privilages) {
 		this.privilages = privilages;
 	}
 
@@ -77,6 +99,14 @@ public class User {
 
 	public void setRootUser(boolean isRootUser) {
 		this.isRootUser = isRootUser;
+	}
+	
+	public FileStorage getStorage() {
+		return storage;
+	}
+	
+	public void setStorage(FileStorage storage) {
+		this.storage = storage;
 	}
 
 	@Override
