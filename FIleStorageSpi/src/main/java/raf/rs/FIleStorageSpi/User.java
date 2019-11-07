@@ -4,12 +4,15 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class User {
+	
 	private String username;
 	private String password;
+	
 	private ArrayList<String> privilages;
+	
 	private boolean isRootUser;
 
-	public User(String username, String password,boolean isRootUser, ArrayList<String> privilages) {
+	public User(String username, String password, boolean isRootUser, ArrayList<String> privilages) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -29,11 +32,11 @@ public class User {
 
 	public boolean createNewUser(String username, String password) {
 
-		return true;
+		return false;
 	}
 
-	public void revokePrivilage(User revokeFromUser, String privilage) {
-		
+	public void revokePrivilage(User revokeFromUser, String privilage) throws Exception {
+
 	}
 
 	public boolean connectToFileStorage(String rootDirPath, String FileStorageRootDirName) throws Exception {
@@ -78,13 +81,15 @@ public class User {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return this.username + " " + this.password + " " + this.privilages.toString();
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
+		if (obj == null) {
+			return false;
+		}
+
 		if (obj instanceof User) {
 			User tmpUser = (User) obj;
 			if (this.username.equals(tmpUser.getUsername()))
@@ -92,6 +97,7 @@ public class User {
 		} else {
 			return false;
 		}
+		
 		return super.equals(obj);
 	}
 }

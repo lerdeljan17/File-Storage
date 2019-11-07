@@ -6,4 +6,8 @@ public class StorageInitException extends Exception{
 		super("Greska prilikom inicijalizacije!");
 	}
 	
+	public StorageInitException(String text) {
+		super("Greska prilikom inicijalizacije! " + text);
+	}
+	
 }
