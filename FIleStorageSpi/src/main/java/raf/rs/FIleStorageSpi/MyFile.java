@@ -22,14 +22,14 @@ public interface MyFile {
 
 	/**
 	 * @param pathSource
-	 * @param pathDest
+	 * @param pathDest - Treba dodati punu putanju, sa sve imenom! Destinacija na koju ce se fajl skinuti. Ne zavisi od putanje do root-a skladista.
 	 * @return
 	 */
 	boolean downloadFile(String pathSource, String pathDest) throws Exception;
 
 	/**
 	 * @param pathSource
-	 * @param pathDest
+	 * @param pathDest - Mora biti navedena puna putanja, sa sve imenom! Upload-uje na destinaciju pathDest, ukoliko se ostavi prazan string, upload ce biti izvrsen na root skladista.
 	 * @return
 	 */
 	boolean uploadFile(String pathSource, String pathDest) throws Exception;
@@ -45,10 +45,9 @@ public interface MyFile {
 	/**
 	 * @param pathDest
 	 * @param files
-	 * @param metaDataFiles
 	 * @return
 	 */
-	boolean uploadMultipleFiles(String pathDest, List<File> files, List<File> metaDataFiles) throws Exception;
+	boolean uploadMultipleFiles(String pathDest, List<File> files) throws Exception;
 
 	/**
 	 * @param FilePath

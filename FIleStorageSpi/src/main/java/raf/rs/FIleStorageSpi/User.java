@@ -11,7 +11,7 @@ public class User {
 	
 	private String username;
 	private String password;
-	private FileStorage storage;
+	//private FileStorage storage;
 	//TODO kako razresiti user - filestorage
 	
 	private ArrayList<PrivilageType> privilages;
@@ -49,7 +49,7 @@ public class User {
 		this.privilages.add(PrivilageType.READ);
 	}
 
-	public User createNewUser(String username, String password) {
+	public User createNewUser(User user, String username, String password) {
 		return null;
 	}
 
@@ -101,13 +101,13 @@ public class User {
 		this.isRootUser = isRootUser;
 	}
 	
-	public FileStorage getStorage() {
-		return storage;
-	}
-	
-	public void setStorage(FileStorage storage) {
-		this.storage = storage;
-	}
+//	public FileStorage getStorage() {
+//		return storage;
+//	}
+//	
+//	public void setStorage(FileStorage storage) {
+//		this.storage = storage;
+//	}
 
 	@Override
 	public String toString() {
