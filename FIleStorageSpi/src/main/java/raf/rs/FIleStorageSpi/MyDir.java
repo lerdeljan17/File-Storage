@@ -6,8 +6,10 @@ import java.util.List;
 public interface MyDir {
 
 	/**
-	 * @param dirPath
-	 * @param searchFor
+	 * Pretraga direktorijuma
+	 * Vraca fajlove koji u imenu imaju parametar searchFor
+	 * @param dirPath - putanja direktorima koji se pretrazuje
+	 * @param searchFor - patern po kome trazimo 
 	 * @return
 	 */
 	File[] searchDirectory(String dirPath, String searchFor);
@@ -62,7 +64,8 @@ public interface MyDir {
 	boolean downloadDirectory(String pathSource, String pathDest) throws Exception;
 
 	/**
-	 * @param dirPathToList
+	 * Meta koja vraca sve direktorijume prosledjenog direktorijuma
+	 * @param dirPathToList - za tu putanju uzima direktorijum koji pretrazuje
 	 * @return
 	 */
 	String listDirectories(String dirPath);
@@ -71,8 +74,8 @@ public interface MyDir {
 	 * vraca string svih fajlova sa ili bez meta podataka u zavisnosti od parametra
 	 * withMetaData
 	 * 
-	 * @param dirPathTolist
-	 * @param withMetaData
+	 * @param dirPathTolist - putanja do direktorijuma
+	 * @param withMetaData - false
 	 * @return
 	 */
 	String listFiles(String dirPath, boolean withMetaData);
@@ -87,6 +90,7 @@ public interface MyDir {
 	List<File> getFilesWithExtension(String path, String extension);
 
 	/**
+	 * Preuzima sve fajlova sa meta*-data
 	 * @param withMetaData
 	 * @return
 	 */
